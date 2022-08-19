@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/fragment_dashboard.xml" value="0.15416666666666667" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/recycler_note.xml" value="0.2" />
       </map>
     </option>
   </component>

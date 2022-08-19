@@ -48,8 +48,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:30.3.2')
     implementation 'com.google.firebase:firebase-firestore:24.2.2'
     implementation 'com.google.firebase:firebase-config:21.1.1'
+    // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.1'
     //Coroutine
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.0-alpha05"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
 }
