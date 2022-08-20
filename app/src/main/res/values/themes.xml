@@ -13,4 +13,25 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="TextInputLayoutTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+        <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
+        <item name="android:background">@drawable/background_curve</item>
+        <item name="android:backgroundTint">#37D1CACA</item>
+        <item name="boxStrokeWidth">0dp</item>
+
+    </style>
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">#d32f2f</item>
+    </style>
+
+    <style name="EditTextDefault" parent="android:Widget.EditText">
+        <item name="android:paddingLeft">10dp</item>
+    </style>
 </resources>

@@ -4,8 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.ayata.esewaremotefirebase.data.model.Note
 import com.ayata.esewaremotefirebase.databinding.FragmentDetailBinding
+import com.google.firebase.firestore.FirebaseFirestore
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
@@ -29,11 +32,31 @@ class DetailFragment : Fragment() {
     }
 
     lateinit var binding: FragmentDetailBinding
+    val databaseRef = FirebaseFirestore.getInstance()
+    val collectionRef = databaseRef.collection("notebook")
+    val documentRef = collectionRef.document("note")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDetailBinding.inflate(inflater, container, false)
+
+        binding.btnSave.setOnClickListener {
+            val title = binding.etTitle.text.toString()
+            val description = binding.etDescription.text.toString()
+            if (title.trim().isNotEmpty() && description.trim().isNotEmpty()) {
+                //save to firebase firestore
+                collectionRef.add(Note(title, description))
+                Toast.makeText(requireContext(), "Note Added", Toast.LENGTH_SHORT).show()
+                parentFragmentManager.popBackStack()
+            } else {
+                Toast.makeText(
+                    requireContext(),
+                    "Please insert title and description.",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+        }
         return binding.root
     }
 
