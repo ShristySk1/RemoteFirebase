@@ -19,6 +19,7 @@
         <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
         <item name="android:background">@drawable/background_curve</item>
         <item name="android:backgroundTint">#37D1CACA</item>
+        <item name="hintEnabled">false</item>
         <item name="boxStrokeWidth">0dp</item>
 
     </style>

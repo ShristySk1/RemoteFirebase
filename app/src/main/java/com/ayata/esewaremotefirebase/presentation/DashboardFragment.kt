@@ -17,6 +17,7 @@ import com.ayata.esewaremotefirebase.databinding.FragmentDashboardBinding
 import com.ayata.esewaremotefirebase.presentation.ui.adapter.NoteAdapter
 import com.ayata.esewaremotefirebase.utils.WrapContentLinearLayoutManager
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.android.material.appbar.AppBarLayout
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import dagger.hilt.android.AndroidEntryPoint
@@ -50,53 +51,13 @@ class DashboardFragment : Fragment() {
     }
 
     private fun setUpCollapsingAppbarBehaviour() {
-        /**/
-
-//        binding.appBarLayout.addOnOffsetChangedListener(
-//            AppBarLayout.OnOffsetChangedListener { appBarLayout, i ->
-//                updateAppbarView(Math.abs((i) / appBarLayout.totalScrollRange.toFloat()))
-//            })
+        binding.appBarLayout.addOnOffsetChangedListener(
+            AppBarLayout.OnOffsetChangedListener { appBarLayout, i ->
+                val percentage = 1-(Math.abs(i)/appBarLayout.getTotalScrollRange().toFloat())
+                binding.tvSubtitle.setAlpha(percentage)
+            })
     }
 
-//    private fun updateAppbarView(offset: Float) {
-//        var appBarLayout=binding.appBarLayout
-//        var toolbar=binding.toolbar
-//        if (isCalculated.not()) {
-////            (200-(100+10))/scroll range
-//            avatarAnimateStartPointY =
-//                Math.abs((appBarLayout.height - (EXPAND_AVATAR_SIZE + horizontalToolbarAvatarMargin)) / appBarLayout.totalScrollRange)
-//                    .toFloat()
-//
-//            avatarCollapseAnimationChangeWeight = 1 / (1 - avatarAnimateStartPointY)
-//
-//            verticalToolbarAvatarMargin = ((toolbar.height - COLLAPSE_IMAGE_SIZE)).toFloat()
-//            isCalculated = true
-//        }
-//
-//        binding.tvSubtitle.apply {
-//            when {
-//                offset > avatarAnimateStartPointY -> {
-//                    val avatarCollapseAnimateOffset = (offset - avatarAnimateStartPointY) * avatarCollapseAnimationChangeWeight
-////                    val avatarSize = EXPAND_AVATAR_SIZE - (EXPAND_AVATAR_SIZE - COLLAPSE_IMAGE_SIZE) * avatarCollapseAnimateOffset
-////                    this.layoutParams.also {
-////                        it.height = Math.round(avatarSize)
-////                        it.width = Math.round(avatarSize)
-////                    }
-//                    this.translationX = ((appBarLayout.width)) * avatarCollapseAnimateOffset
-//                    this.translationY = ((toolbar.height)) * avatarCollapseAnimateOffset
-//                }
-//                else -> this.layoutParams.also {
-//                    if (it.height != EXPAND_AVATAR_SIZE.toInt()) {
-//                        it.height = EXPAND_AVATAR_SIZE.toInt()
-//                        it.width = EXPAND_AVATAR_SIZE.toInt()
-//                        this.layoutParams = it
-//                    }
-//                    translationX = 0f
-//                }
-//            }
-//
-//        }
-//    }
 
     private fun initRemoteConfig() {
         val newSubTitle = remoteConfigManager.getSubTitle()

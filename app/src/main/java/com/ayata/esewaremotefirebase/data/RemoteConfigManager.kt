@@ -2,7 +2,9 @@ package com.ayata.esewaremotefirebase.data
 
 import android.util.Log
 import com.ayata.esewaremotefirebase.data.datasource.IRemoteConfigApi
+import com.ayata.esewaremotefirebase.data.model.Promotion
 import com.ayata.esewaremotefirebase.data.model.ThemeData
+import com.google.firebase.remoteconfig.BuildConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.gson.Gson
 import javax.inject.Inject
@@ -32,6 +34,14 @@ class RemoteConfigManager @Inject constructor(
       return  read<ThemeData>(ConfigParam.THEME_DATA)?: THEME_DEFAULT_VALUE
     }
 
+    override fun getLatestVersionCode(): Int {
+        return  read<Int>(ConfigParam.APP_UPDATE)?: CURRENT_VERSION_CODE
+    }
+
+    override fun getPromotion(): Promotion {
+        return  read<Promotion>(ConfigParam.PROMOTION)?: DEFAULT_PROMOTION
+    }
+
     private inline fun <reified T> read(param: ConfigParam): T? = read(param, T::class.java)
 
     private fun <T> read(param: ConfigParam, returnType: Class<T>): T? {
@@ -53,7 +63,9 @@ class RemoteConfigManager @Inject constructor(
 
     private enum class ConfigParam(val key: String) {
         SUB_TITLE("app_subtitle"),
-        THEME_DATA("theme_data")
+        THEME_DATA("theme_data"),
+        APP_UPDATE("version_code"),
+        PROMOTION("promotion")
 
     }
 
@@ -65,6 +77,8 @@ class RemoteConfigManager @Inject constructor(
         private const val SOME_DEFAULT_VALUE = "Hello !"
         val theme=ThemeData(color = "#FF6200EE", content_color ="#FFFFFF")
         private  val THEME_DEFAULT_VALUE= theme
+        private val CURRENT_VERSION_CODE=BuildConfig.VERSION_CODE
+        private val DEFAULT_PROMOTION=Promotion("","",false)
     }
 
     fun <T> Gson.jsonToObjectOrNull(json: String?, clazz: Class<T>): T? =
