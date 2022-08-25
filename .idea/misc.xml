@@ -3,11 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable-v24/background_top_curve_10dp.xml" value="0.177" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable/background_circle.xml" value="0.1525" />
         <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable/background_curve.xml" value="0.169" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable/background_curve_10dp.xml" value="0.114" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable/background_top_curve_10dp.xml" value="0.114" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable/close_with_background.xml" value="0.177" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable/ic_back.xml" value="0.1575" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/drawable/ic_close.xml" value="0.177" />
         <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/dialog_alert.xml" value="0.2" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/dialog_promotion.xml" value="0.2" />
         <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/fragment_dashboard.xml" value="0.264" />
         <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/fragment_detail.xml" value="0.264" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/recycler_dashboard_note.xml" value="0.176" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/recycler_dashboard_quote.xml" value="0.25416666666666665" />
         <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/layout/recycler_note.xml" value="0.2" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.128" />
+        <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.128" />
         <entry key="..\:/my_firstflutterapp/EsewaRemoteFirebase/app/src/main/res/xml/dashboard_default_values.xml" value="0.15885416666666666" />
       </map>
     </option>

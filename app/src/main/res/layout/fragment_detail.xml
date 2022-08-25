@@ -5,52 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-   <Toolbar
-       android:layout_width="match_parent"
-       android:title="Enter Quote"
-       android:titleTextColor="@color/colorBlack"
-       android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:layout_height="53dp">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_quote"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="8dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorDivider"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_marginVertical="2dp"
-        android:layout_marginTop="8dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="16dp"
         app:cardCornerRadius="10dp">
 
-        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp"
-            tools:context=".presentation.DetailFragment">
+            tools:context=".presentation.ui.DetailFragment">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Title" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:theme="@style/TextInputLayoutTheme"
-                app:boxStrokeWidth="0dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@android:color/transparent" />
-            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Description" />
+                android:textSize="16sp"
+                android:text="@string/quote" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -60,14 +65,37 @@
                 app:boxStrokeWidth="0dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_description"
+                    android:id="@+id/et_quote"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:gravity="top|left"
-                    android:hint="Write your comment"
+                    android:textColorHint="@color/colorGrayText"
+                    android:hint="@string/write_your_quote_here"
                     android:inputType="textMultiLine"
                     android:minLines="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:text="@string/author" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:theme="@style/TextInputLayoutTheme"
+                app:boxStrokeWidth="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -75,7 +103,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Save" />
+                android:background="@drawable/background_curve_10dp"
+                android:text="@string/save" />
 
 
         </LinearLayout>

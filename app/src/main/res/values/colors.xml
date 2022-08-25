@@ -10,4 +10,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorGray">#838282</color>
+    <color name="colorGrayText">#7C7B7B</color>
+    <color name="colorDivider">#E6E5E5</color>
 </resources>

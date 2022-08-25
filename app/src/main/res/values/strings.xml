@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Quotes</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="update">Update</string>
+    <string name="not_now">Not Now</string>
+    <string name="enter_quote">Add Quote</string>
+    <string name="save">Save</string>
+    <string name="author">Author</string>
+    <string name="write_your_quote_here">Write your quote here.</string>
+    <string name="quote">Quote</string>
+    <string name="empty_string_msg">Please insert title and description.</string>
+    <string name="quote_updated_success_msg">Quote Updated</string>
+    <string name="quote_added_success_msg">Quote Added</string>
+
 </resources>

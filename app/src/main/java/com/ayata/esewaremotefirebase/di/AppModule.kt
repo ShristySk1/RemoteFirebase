@@ -1,6 +1,6 @@
 package com.ayata.esewaremotefirebase.di
 
-import com.ayata.esewaremotefirebase.data.RemoteConfigManager
+import com.ayata.esewaremotefirebase.data.configmanager.RemoteConfigManager
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
